@@ -1,0 +1,81 @@
+{% extends "dashboard.twig" %}
+
+{% block title %} CRM {% endblock %}
+
+{% block content %}
+    <div class="col-md-12">
+        <a href="{{ path_for('dashboard.crm') }}" class="btn btn btn-default" title="Voltar"><i class="fa fa-arrow-left"></i> Voltar</a>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <article class="col-md-12 form_campanha">
+        <h1 class="titulo_grafico">Editar Campanha</h1>
+        <hr>
+        <form method="post" action="{{ path_for('campanha.update', {id: campanha.ID}) }}">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>*Filial</label>
+                    <select name="FILIAL" class="form-control" required>
+                        <option value="">Selecione uma filial</option>
+                        <option value="Todas"{% if campanha.FILIAL == "Todas" %} selected {% endif %}>Todas as filiais</option>
+                        {% for filial in filiais %}
+                            <option value="{{ filial.FILIAL }}"{% if filial.FILIAL | trim == campanha.FILIAL %} selected{% endif %}>{{ filial.FILIAL | trim }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>*Conceito</label>
+                    <select name="CONCEITO" class="form-control" required>
+                        <option value="">Selecione um conceito</option>
+                        <option value="A" {% if campanha.CONCEITO == "A" %} selected{% endif %}>A</option>
+                        <option value="B" {% if campanha.CONCEITO == "B" %} selected{% endif %}>B</option>
+                        <option value="C" {% if campanha.CONCEITO == "C" %} selected{% endif %}>C</option>
+                        <option value="D" {% if campanha.CONCEITO == "D" %} selected{% endif %}>D</option>
+                        <option value="E" {% if campanha.CONCEITO == "E" %} selected{% endif %}>E</option>
+                        <option value="F" {% if campanha.CONCEITO == "F" %} selected{% endif %}>F</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>*Data início</label>
+                        <input type="text" name="DT_INICIO" class="form-control format-date" required value="{{ campanha.DT_INICIO | date('d/m/Y') }}">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>*Data limite</label>
+                        <input type="text" name="DT_LIMITE" class="form-control format-date" required value="{{ campanha.DT_LIMITE | date('d/m/Y') }}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <span class="titulo_label">*Tipo de desconto</span>
+                    <label class="radio-inline">
+                        <input type="radio" name="TIPO" class="radio-inline j_change"{% if campanha.VALOR != null %} checked{% endif %} value="valor"/> Valor
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="TIPO" class="radio-inline j_change"{% if campanha.PERCENTUAL != null %} checked{% endif %} value="percentual"/> Percentual
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="VALOR" placeholder="Valor" {% if campanha.VALOR != null %}required{% endif %} class="form-control format-money{% if campanha.VALOR == null %} none{% endif %}" id="j_valor" value="{{ campanha.VALOR }}">
+                    <input type="number" name="PERCENTUAL" placeholder="Percentual" {% if campanha.PERCENTUAL != null %}required{% endif %} min="0" class="form-control{% if campanha.PERCENTUAL == null %} none{% endif %}" id="j_percentual" value="{{ campanha.PERCENTUAL }}"> 
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="text-center">
+                <input type="hidden" name="MARCA" value="{{ user.NOME }}">
+                <input type="submit" value="Editar Campanha" class="btn btn-primary"/>
+            </div>
+        </form>
+    </article>
+{% endblock %}    

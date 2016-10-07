@@ -1,0 +1,157 @@
+{% extends "dashboard.twig" %}
+
+{% block title %} Cockpit {% endblock %}
+
+{% block content %}
+    
+    {% for conceito in conceitos %}
+    <div class="col-md-2 col-sm-4 col-xs-12">
+        <div class="panel panel-primary text-center">
+            <div class="panel-heading">
+                Conceito: {{ conceito.CONCEITO }}
+            </div>
+            <div class="panel-body">
+                <span style="font-size: 1.2em; font-weight: 300;">VA:</span> <span style="font-size: 1.8em;">R$ {{ conceito.VA | number_format(2, ',', '.') }}</span>
+            </div>
+            <div class="panel-footer">
+                Clientes: {{ conceito.QTDE_CLIENTES | number_format(0, '', '.') }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    
+    
+    <div class="clearfix"></div>
+    
+    <div class="charts">
+        <section class="col-md-6">
+            <h1 class="titulo_grafico">Qtde Clientes e VA por Meses Ausente</h1>
+            <canvas id="mybarChart"></canvas>
+        </section>
+        <section class="col-md-6">
+            <h1 class="titulo_grafico">TOP 4 Lojas em Qtde de Clientes</h1>
+            <canvas id="canvasDoughnut"></canvas>
+        </section>
+    </div>
+
+    <article class="col-md-12 container_relatorio">
+        <h1>Listagem de Clientes</h1>
+        <table class="table table-striped table-responsive tabela_relatorio">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Conteito</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Última compra</th>
+                    <th>Filial</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>    
+            <tbody>
+                <tr>
+                    <td>Juliana Souza</td>
+                    <td>A</td>
+                    <td>juliana.souza@gmail.com</td>
+                    <td>(11) 95551-5568</td>
+                    <td>02/08/2016</td>
+                    <td>Analia Franco</td>
+                    <td>2.588,36</td>
+                </tr>
+                <tr>
+                    <td>Amanda Pires</td>
+                    <td>D</td>
+                    <td>amanda.pires@gmail.com</td>
+                    <td>(11) 95541-3326</td>
+                    <td>02/05/2016</td>
+                    <td>Analia Franco</td>
+                    <td>1.350,00</td>
+                </tr>
+                <tr>
+                    <td>Sonia Maria</td>
+                    <td>B</td>
+                    <td>sonia.maria@outlook.com</td>
+                    <td>(19) 94478-5496</td>
+                    <td>22/04/2016</td>
+                    <td>Bourbon Shopping</td>
+                    <td>1.565,80</td>
+                </tr>
+                <tr>
+                    <td>Andressa Cristina</td>
+                    <td>C</td>
+                    <td>andressa.cris@gmail.com</td>
+                    <td>(11) 99554-2256</td>
+                    <td>22/01/2016</td>
+                    <td>Salvador Shopping</td>
+                    <td>769,90</td>
+                </tr>
+                <tr>
+                    <td>Karine Silva</td>
+                    <td>A</td>
+                    <td>karine.silva@gmail.com</td>
+                    <td>(21) 99778-8941</td>
+                    <td>11/05/2016</td>
+                    <td>Rio Sul</td>
+                    <td>2.150,00</td>
+                </tr>
+                <tr>
+                    <td>Luciana Ferreira</td>
+                    <td>D</td>
+                    <td>luciana.souza@gmail.com</td>
+                    <td>(21) 95621-6697</td>
+                    <td>19/08/2016</td>
+                    <td>ABC Santo Andre</td>
+                    <td>1.010,80</td>
+                </tr>
+                <tr>
+                    <td>Amanda Moraes</td>
+                    <td>B</td>
+                    <td>amanda.moraes@gmail.com</td>
+                    <td>(21) 94453-1125</td>
+                    <td>22/09/2016</td>
+                    <td>Cidade São Paulo</td>
+                    <td>1.590,10</td>
+                </tr>
+                <tr>
+                    <td>Beatriz Gomes</td>
+                    <td>C</td>
+                    <td>beatriz.gomes@hotmail.com</td>
+                    <td>(19) 97845-0125</td>
+                    <td>02/09/2016</td>
+                    <td>Morumbi</td>
+                    <td>879,90</td>
+                </tr>
+                <tr>
+                    <td>Jessica Vicione</td>
+                    <td>D</td>
+                    <td>jessica.vicione@hotmail.com</td>
+                    <td>(11) 98754-4069</td>
+                    <td>30/06/2016</td>
+                    <td>Rio Sul</td>
+                    <td>1.000,00</td>
+                </tr>
+                <tr>
+                    <td>Fernanda Silva</td>
+                    <td>B</td>
+                    <td>fernanda.silva@gmail.com</td>
+                    <td>(11) 97565-4408</td>
+                    <td>03/08/2016</td>
+                    <td>Center Norte</td>
+                    <td>790,90</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="container_pagination">
+            <ul class="pagination">
+                <li><a href="#"><<</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">>></a></li>
+            </ul>
+        </div>
+    </article>
+{% endblock %}    

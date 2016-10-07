@@ -1,0 +1,11 @@
+{% if errors %}
+    <div class="alert alert-warning">
+        <ul>
+            {% for error in errors %}
+                {% for value in error %}
+                    <li>{{ value }}</li>
+                {% endfor %}    
+            {% endfor %}    
+        </ul>
+    </div>
+{% endif %}

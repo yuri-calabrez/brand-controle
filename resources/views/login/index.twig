@@ -1,0 +1,47 @@
+{% extends "login.twig" %}
+
+{% block conteudo %}
+    <div class="col-md-7 col-md-offset-2 login_container">
+          <img src="{{ base_url() }}/public/images/brand-controle/logo-large.png" alt="Logo Brand Controle" class="logo_login">
+
+          <div class="content_login">
+            {% include 'messages/flash-messages.twig' %}
+            <div class="clearfix"></div>          
+            <form action="" method="post">
+              <div class="form-group has-feedback">
+                <label>E-mail:</label>
+                <input type="email" class="form-control has-feedback-right{% if errors.email %} has-error{% endif %}" name="email" value="{{ old.email }}" required>
+                <span class="form-control-feedback has-feedback-right"><i class="material-icons">email</i></span>
+                
+                    {% if errors.email %}
+                        <span class="help-block text-left">
+                            {{ errors.email | first }}
+                        </span>
+                    {% endif %}
+              </div>
+
+               <div class="form-group has-feedback">
+                <label>Senha:</label>
+                <input type="password" class="form-control has-feedback{% if errors.password %} has-error{% endif %}" name="password" required>
+                <span class="form-control-feedback has-feedback-right"><i class="material-icons">https</i></span>
+                    {% if errors.password %}
+                        <span class="help-block text-left">
+                            {{ errors.password | first }}
+                        </span>
+                    {% endif %}
+              </div>
+
+              <div class="text-center">
+                <input type="submit" value="Login" class="btn_login">
+              </div>
+                
+                {{ csrf.field | raw }}
+            </form>
+
+            <div class="nao_possui_cadastro">
+              <p>Não possui cadastro? Entre em contato conosco <a href="{{ base_url() }}/#contato" title="Entre em contato">aqui</a></p>
+            </div>
+          </div>
+          <a href="{{ base_url() }}" class="voltar">Voltar para Brand Controle</a>
+        </div>
+{% endblock %}

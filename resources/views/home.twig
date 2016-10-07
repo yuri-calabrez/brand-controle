@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br" itemscope itemtype="{{ seo.getSchema() }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ seo.getTitle() }}</title>
+    
+    <meta name="google-site-verification" content="OVFd19VcnlxF9YmlMh0quOUhjdXxnBo5tn6RHE3Iai4" />
+
+    <link rel="icon" type="image/png" href="{{ base_url() }}/public/images/brand-controle/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ base_url() }}/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ base_url() }}/public/css/brand-controle/style.min.css">
+
+    <meta name="robots" content="index, follow"/>
+
+    <meta itemprop="name" content="{{ seo.getTitle() }}"/>
+    <meta itemprop="description" content="{{ seo.getDescription() }}"/>
+    <meta itemprop="image" content="{{ base_url() }}/{{ seo.getImage() }}"/>
+    <meta itemprop="url" content="{{ base_url() }}"/>
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ seo.getTitle() }}" />
+    <meta property="og:description" content="{{ seo.getDescription() }}" />
+    <meta property="og:image" content="{{ base_url() }}/{{ seo.getImage() }}" />
+    <meta property="og:url" content="{{ base_url() }}" />
+    <meta property="og:site_name" content="Brand Controle" />
+    <meta property="og:locale" content="pt_BR" />
+    
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="{{ base_url() }}" />
+    <meta property="twitter:title" content="{{ seo.getTitle() }}" />
+    <meta property="twitter:description" content="{{ seo.getDescription() }}" />
+    <meta property="twitter:image" content="{{ base_url() }}/{{ seo.getImage() }}" />
+    <meta property="twitter:url" content="{{ base_url() }}" />
+	
+	<script>
+            /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-82860807-1', 'auto');
+            ga('send', 'pageview');*/
+	</script>
+	
+</head>
+<body>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom affix-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a href="#page-top"><img src="{{ base_url() }}/public/images/brand-controle/logo-small.png" alt=""></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right menu_nav">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#sobre" class="j-landing">Sobre o App</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#funcionalidades" class="j-landing">Funcionalidades</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#como_funciona" class="j-landing">O Brand Controle</a>
+                    </li>
+                    <!--<li class="page-scroll">
+                        <a href="#parceiros" class="j-landing">Parceiros</a>
+                    </li>-->
+                    <li class="page-scroll">
+                        <a href="#contato" class="j-landing">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container_app">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <h1>App Brand Controle</h1>
+                    <ul>
+                        <li>Suas marcas mais perto de você.</li>
+                        <li>Promoções e campanhas direcionadas.</li>
+                        <li>Lançamentos, dicas e sugestões para você montar seu look.</li>
+                        <li>Acompanhamento de suas compras, produtos, coleções, preços e lojas. </li>
+                    </ul>
+
+                    <a href="#" title="Faça o download agora mesmo!" class="btn btn-primary btn-lg"><i class="material-icons">cloud_download</i> Download</a>
+                    <a href="#" title="Saiba Mais" class="btn btn-warning btn-lg">Saiba mais</a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12" id="img_app_login">
+                    <img src="{{ base_url() }}/public/images/brand-controle/login-app.png" alt="Imagem app" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="sobre" class="sobre-app full_width">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section_head">
+                        <h1><span class="line-title"></span> Sobre o App <span class="line-title"></span></h1>
+                        <p>As marcas que você compra estão aqui. Você tem acesso direto ao histórico de compras, promoções, campanhas, e dicas de produtos para que cada vez mais você continue sendo bem tratado pelas marcas que gosta.</p>
+                        <p>Através do <strong>App Brand Controle</strong>, você pode acompanhar todas as novidades das suas marcas favoritas, e interagir diretamente com elas. Já pensou em chegar em uma loja, e receber uma promoção exclusiva para você só pela sua visita? </p>
+                        <p>O <strong>App Brand Controle</strong> é canal entre suas marcas e você.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="funcionalidades" class="full_width">
+        <div class="container">
+            <div class="row">
+                <dvi class="section_head">
+                    <h1><span class="line-title"></span> Funcionalidades <span class="line-title"></span></h1>
+                    <p>As marcas que são parceiras do Brand Controle vão trabalhar para que suas compras sejam cada vez melhores, com promoções e atendimento excluisivos.</p>
+                    <p>Através do histórico de suas compras, suas marcas vão direcionar exatamente o que é de seu gosto, e, o que é tendência e combina com você.	</p>
+                </dvi>
+
+                <div class="col-md-4">
+                    <div class="funcionalidades_grid">
+                        <div class="col-md-2 funcionaliades_icon">
+                            <i class="material-icons">visibility</i>
+                        </div>
+
+                        <article class="col-md-10 funcionalidades_info">
+                            <h1>Promoções</h1>
+                            <p>Descontos e campanhas direcionados exclusivamente para você.</p>
+                        </article>
+                    </div>
+
+                   <div class="funcionalidades_grid">
+                       <div class="col-md-2 funcionaliades_icon">
+                            <i class="material-icons">history</i>
+                        </div>
+
+                        <article class="col-md-10 funcionalidades_info">
+                            <h1>Atendimento</h1>
+                            <p>Vendedores mais próximos auxiliando suas compras.</p>
+                        </article>
+                   </div>
+
+                   <div class="funcionalidades_grid">
+                       <div class="col-md-2 funcionaliades_icon">
+                            <i class="material-icons">speaker_phone</i>
+                        </div>
+
+                        <article class="col-md-10 funcionalidades_info">
+                            <h1>Relacionamento</h1>
+                            <p>Sua opinião fará com que as suas marcas trabalhem para melhorar e satisfazer suas vontades.</p>
+                        </article>
+                   </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="image_app_center">
+                        <img src="{{ base_url() }}/public/images/brand-controle/iPhone-black.png" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="funcionalidades_grid">
+                        <div class="col-md-2 funcionaliades_icon">
+                            <i class="material-icons">visibility</i>
+                        </div>
+
+                        <article class="col-md-10 funcionalidades_info">
+                            <h1>Estilo</h1>
+                            <p>Dicas de produtos e looks que são tendência que combinam com seu perfil.</p>
+                        </article>
+                    </div>
+
+                   <div class="funcionalidades_grid">
+                       <div class="col-md-2 funcionaliades_icon">
+                            <i class="material-icons">history</i>
+                        </div>
+
+                        <article class="col-md-10 funcionalidades_info">
+                            <h1>Produtos</h1>
+                            <p>Reserva de produtos em suas lojas para prova.</p>
+                        </article>
+                   </div>
+
+                   <div class="funcionalidades_grid">
+                       <div class="col-md-2 funcionaliades_icon">
+                            <i class="material-icons">speaker_phone</i>
+                        </div>
+
+                        <article class="col-md-10 funcionalidades_info">
+                            <h1>Blog's</h1>
+                            <p>Acompanhe pelo App Brand Controle os melhores blogs de moda.</p>
+                        </article>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="como_funciona" class="full_width">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section_head">
+                        <h1><span class="line-title"></span> O Brand Controle <span class="line-title"></span></h1>
+                    </div>
+                
+                    <div class="clearfix"></div>
+
+                    <div class="responsive_video">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/DEVtrGbbFnE" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<section id="parceiros" class="full_width sessao_parceiros">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section_head">
+                   <h1><span class="line-title"></span> Parceiros <span class="line-title"></span></h1>
+              </div>
+              <div class="clearfix"></div>
+              <ul class="slider-parceiros">
+                  <li><img src="images/brand-controle/parceiros/shoulder.jpg" alt="Shoulder" title="Shoulder"></li>
+                  <li><img src="images/brand-controle/parceiros/le-lis-blanc.jpg" alt="Le Lis Blank" title="Le Lis Blanc"></li>
+                  <li><img src="images/brand-controle/parceiros/cns.jpg" alt="CNS" title="CNS"></li>
+                  <li><img src="images/brand-controle/parceiros/tvz.jpg" alt="TVZ" title="TVZ"></li>
+              </ul>
+            </div>
+          </div>
+        </div>  
+    </section>-->
+
+    <section id="contato" class="full_width sessao_contato">
+        <div class="container">
+            <div class="row">
+                <div class="section_head">
+                   <h1><span class="line-title"></span> Contato <span class="line-title"></span></h1>
+                   <p>Dúvidas, sugestões e dicas sobre o Brand Controle serão muito bem vindas.</p>
+              </div>
+              <div class="clearfix"></div>
+
+                <div class="col-md-8 col-md-offset-2">
+                    {% include 'messages/flash-messages.twig' %}
+                    <form action="{{ path_for('contato') }}" method="post">
+                       <div class="form-group">
+                            <input type="text" class="form-control" name="nome" required placeholder="Nome:">
+                       </div>
+
+                       <div class="form-group">
+                            <input type="email" class="form-control" name="email" required placeholder="E-mail:">
+                       </div>
+
+                        <div class="form-group">
+                           <textarea name="mensagem" rows="10" class="form-control" required placeholder="Mensagem:"></textarea>
+                       </div>
+                        
+                        {{ csrf.field | raw }}
+
+                       <button type="submit">Enviar</button>
+                   </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news_latter" class="full_width">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="news_content">
+                        <h1>Inscreva-se em nossa NewsLatter</h1>
+                        <p>Receba novidades do <strong>App Brand Controle</strong>.</p>
+                        <form action="{{ path_for('newsletter.subscribe') }}" class="form_news form_ajax" method="post">
+                            <div class="j-ajax-message"></div>
+                            <div class="form-group">
+                                <input type="email" name="email_news" class="form-control" placeholder="E-mail" required>
+                            </div>
+                            
+                            {{ csrf.field | raw }}
+
+                            <button type="submit" class="btn btn-warning btn-lg">Inscreva-se!</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <img src="{{ base_url() }}/public/images/brand-controle/login-app.png" alt="Imagem app" class="img-responsive app_news">
+                </div>
+                <div class="col-md-4">
+                    <div class="news_content">
+                        <h2 class="plataformas">Em breve nas plataformas:</h2>
+                        <div class="plataformas_disponiveis">
+                            <a href="#" title="Download via Apple Store"><img src="{{ base_url() }}/public/images/brand-controle/app-store.png" alt="Apple Store"></a>
+                            <a href="#" title="Download via Google Play"><img src="{{ base_url() }}/public/images/brand-controle/google-play.png" alt="Google Play"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="full_width main_footer footer_landing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <p>Sobre a <a class="link_rodape" href="{{ path_for('sobre') }}" title="Brand Controle">Brand Controle</a></p>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <p>&copy; 2016 Brand Controle - Todos os direitos reservados.</p>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <ul class="sociais">
+                       <li><a href="https://www.facebook.com/Brand-Controle-1013415772104591/" title="Brand Controle no Facebook"><img src="{{ base_url() }}/public/images/brand-controle/facebook-icon.png" alt="Icone Facebook"></a></li>
+                       <li><a href="#" title="Brand Controle no Twitter"><img src="{{ base_url() }}/public/images/brand-controle/twitter-icon.png" alt="Icone Twitter"></a></li>
+                       <li><a href="#" title="Brand Controle no Instagram"><img src="{{ base_url() }}/public/images/brand-controle/instagram-icon.png" alt="Icone Instagram"></a></li>
+                       <li><a href="#" title="Brand Controle no Linkedin"><img src="{{ base_url() }}/public/images/brand-controle/linkedin-icon.png" alt="Icone Linkedin"></a></li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ base_url() }}/public/js/jquery.min.js"></script>
+    <script src="{{ base_url() }}/public/js/bootstrap.min.js"></script>
+    <script src="{{ base_url() }}/public/js/brand-controle/script.min.js"></script>
+</body>
+</html>

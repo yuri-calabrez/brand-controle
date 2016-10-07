@@ -1,0 +1,44 @@
+{% extends "dashboard.twig" %}
+
+{% block title %} CRM {% endblock %}
+
+{% block content %}
+    <div class="col-md-12 text-right">
+        <a href="{{ path_for('campanha.create') }}" class="btn btn btn-default" title="Criar Nova Campanha"><i class="fa fa-plus"></i> Criar Nova Campanha</a>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <section class="col-md-12 lista_campanhas">
+        <h1 class="titulo_grafico">Lista de Campanhas</h1>
+        <table class="table table-striped table-responsive tabela_relatorio">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Conceito</th>
+                    <th>Filial</th>
+                    <th>Valor</th>
+                    <th>Percentual</th>
+                    <th>Data Limite</th>
+                    <th>Editar</th>
+                    <th>Remover</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {% for campanha in campanhas %}
+                <tr>
+                    <td>{{ campanha.ID }}</td>
+                    <td>{{ campanha.CONCEITO }}</td>
+                    <td>{{ campanha.FILIAL }}</td>
+                    <td>{% if campanha.VALOR != null %}R$ {{ campanha.VALOR | number_format(2, ',', '.') }} {% else %} - {% endif %}</td>
+                    <td>{% if campanha.PERCENTUAL != null %} {{ campanha.PERCENTUAL}}% off {% else %} - {% endif %}</td>
+                    <td>{{ campanha.DT_LIMITE | date('d/m/Y') }}</td>
+                    <td><a href="{{ path_for('campanha.edit', {id: campanha.ID}) }}" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
+                    <td><a href="{{ path_for('campanha.delete', {id: campanha.ID}) }}" class="btn btn-danger"><i class="fa fa-remove"></i></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+{% endblock %}    
