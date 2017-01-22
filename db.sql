@@ -122,18 +122,6 @@ CREATE TABLE `BRC_NEWSLETTER` (
 -- Extraindo dados da tabela `BRC_NEWSLETTER`
 --
 
-INSERT INTO `BRC_NEWSLETTER` (`ID`, `EMAIL`, `CREATED_AT`, `UPDATED_AT`) VALUES
-(1, 'yuri.calabrez@gmail.com', '2016-09-07 23:14:31', '2016-09-07 23:14:31'),
-(2, 'mkfiuza@hotmail.com', '2016-09-07 23:17:20', '2016-09-07 23:17:20'),
-(3, 'lu_neusa@hotmail.com', '2016-09-07 23:22:39', '2016-09-07 23:22:39'),
-(9, 'douglas_faustino_1989@hotmail.com', '2016-09-09 12:51:21', '2016-09-09 12:51:21'),
-(10, 'rafael.aro31@gmail.com', '2016-09-12 16:53:22', '2016-09-12 16:53:22'),
-(11, 'amandahque@gmail.com', '2016-09-12 23:28:29', '2016-09-12 23:28:29'),
-(12, 'asousa@gimba.com.br', '2016-09-12 23:30:36', '2016-09-12 23:30:36'),
-(13, 'dkchevi@hotmail.com', '2016-09-12 23:54:39', '2016-09-12 23:54:39'),
-(14, 'tigotigo2007@gmail.com', '2016-09-14 21:06:58', '2016-09-14 21:06:58'),
-(15, 'rafael.aro@especialistadolar.com.br', '2016-10-05 00:15:44', '2016-10-05 00:15:44');
-
 -- --------------------------------------------------------
 
 --
